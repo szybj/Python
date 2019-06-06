@@ -37,5 +37,13 @@ for name in s:
     print name
 
 s = set([('Adam', 95), ('Lisa', 85), ('Bart', 59)])
-for a in s:
-    print a[0] + ':', a[1]
+for item in s:
+    print item[0] + ':', item[1]
+
+s = set([1, 2, 3, 4])
+s.add(4)
+print s
+
+s = set([1, 2, 3])
+s.remove(2)
+print s
