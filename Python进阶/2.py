@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 print abs(-90)
 print abs
 a = abs
@@ -54,3 +55,23 @@ def cmp_ignore_case(s1, s2):
     return 1
   return 0
 print sorted(['bob', 'about', 'Zoo', 'Credit'], cmp_ignore_case)
+
+def a():
+  print 'call f()...'
+  def g():
+    print 'call g()...'
+  return g
+
+x = a()
+x()
+
+def cacl_sum(lst):
+  return sum(lst)
+print cacl_sum([1, 2, 3, 4])
+
+def cacl_sum1(lst):
+  def lazy_sum():
+    return sum(lst)
+  return lazy_sum
+s = cacl_sum1([1, 2, 3, 4])
+print s() # 10 
